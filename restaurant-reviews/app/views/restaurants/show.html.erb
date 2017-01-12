@@ -1,0 +1,26 @@
+<h3><%= @restaurant.name %></h3>
+
+
+
+<p><%= @restaurant.address %>, <%= @restaurant.city %>, <%= @restaurant.zip %>, <%= @restaurant.state %></p>
+<p>Description: <%= @restaurant.description %></p>
+
+<p><%= link_to 'Add a Review', new_restaurant_review_path(@restaurant) %></p>
+<p>Categories:</p>
+  <ul>
+    <% @categories.each do |category| %>
+      <li><span><%=link_to category.name, category %></span></li>
+    <% end %>
+  </ul>
+<h4>Reviews:</h4>
+<ol>
+  <% unless @reviews.nil? %>
+    <% @reviews.each do |review| %>
+      <li>
+        <p>Created at: <%= review.created_at.strftime("%B %d %Y") %></p>
+        <p><%= review.body %></p>
+        <p>Rating: <%= review.rating %></p>
+      </li>
+    <% end %>
+  <% end %>
+</ol>

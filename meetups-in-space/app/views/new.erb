@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Meetups new</title>
+
+<style type="text/css">
+
+input, select, textarea {
+color: black;
+}
+</style>
+
+</head>
+<body>
+
+  <h1>Add Meetup</h1>
+
+  <form action="/meetups" method="post">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="meetups[name]" value="<%= @meetups.name %>">
+    </div>
+
+    <div>
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="meetups[location]" value="<%= @meetups.location %>">
+    </div>
+
+    <div>
+      <label for="description">Description:</label>
+        <textarea id="description" name="meetups[description]" value="<%= @meetups.description %>"><%= @meetups.description %></textarea>
+    </div>
+
+    <input type="submit" value="Add Meetup">
+  </form>
+
+  <h3><%= @error_message %> </h3>
+
+  <a href="/meetups">Back to main page</a>
+
+</body>
+</html>

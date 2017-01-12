@@ -1,0 +1,22 @@
+<h1><%= @project.name %></h1>
+
+<dl>
+  <dt>Description:</dt>
+  <dd><%= @project.description %></dd>
+
+  <dt>Members: </dt>
+  <% @members.each do |member| %>
+    <dd><%= member.first_name %> <%= member.last_name %> (<%= member.email %>)</dd>
+
+  <% end %>
+
+  <dt>Tasks(assigned to:):</dt>
+
+  <% @tasks_users.each do |task_user| %>
+    <dd><%= task_user %> </dd>
+
+  <% end %>
+</dl>
+
+
+<a href="/projects">Back to all projects</a>

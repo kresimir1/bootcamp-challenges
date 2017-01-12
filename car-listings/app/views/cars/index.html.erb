@@ -1,0 +1,25 @@
+
+<h3>Available Cars</h3>
+
+  <%= form_tag cars_path, method: 'get' do %>
+    <p id="Search"><%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search" %></p>
+  <% end %>
+
+<%= link_to "Advanced Search", new_search_path %>
+
+<ol>
+  <% unless @cars.nil? %>
+    <% @cars.each do |car| %>
+      <li>
+        <p><%=link_to car.model, car %>, <%= car.year %></p>
+        <p><%= Manufacturer.find(car.manufacturer_id).name %><p>
+        <p><%= car.condition(car.year, car.milage)%></p>
+      </li>
+    <% end %>
+  <% end %>
+</ol>
+
+
+<p><%= link_to 'Add New Car', new_car_path %></p>
+<p><%= link_to 'Add New Manufacturer', new_manufacturer_path %></p>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CarListings</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+    <p><%= link_to 'Home', cars_path %><p>
+    <p><%= link_to 'Manufacturers', manufacturers_path %><p>
+    </nav>
+    <p class="notice"><%= notice %></p>
+    <%= yield %>
+  </body>
+</html>

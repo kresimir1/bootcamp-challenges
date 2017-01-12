@@ -1,0 +1,51 @@
+
+div {
+  margin: 30px auto;
+  background-color: #008000;
+  height: 70px;
+  width: 70px;
+  border-radius: 500px;
+  }
+
+.branch-1 {
+  position: relative;
+  right: 50px;
+  width: 170px;
+  }
+
+.branch-2 {
+  position: relative;
+  right: 100px;
+  width: 270px;
+  }
+
+.branch-3 {
+  position: relative;
+  right: 150px;
+  width: 370px;
+  }
+
+
+.branch-4 {
+  position: relative;
+  right: 200px;
+  width: 470px;
+  }
+
+.branch-5 {
+  position: relative;
+  right: 250px;
+  width: 570px;
+  }
+
+.branch-6 {
+  position: relative;
+  right: 300px;
+  width: 670px;
+  }
+
+.trunk {
+  height: 240px;
+  width: 70px;
+  background-color: #A52A2A
+}

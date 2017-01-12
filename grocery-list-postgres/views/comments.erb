@@ -1,0 +1,12 @@
+<h1>Item comments</h1>
+
+    <%unless @grocery_info.nil? %>
+      <%unless @comments_info.nil? %>
+        <h3>Item: <%= @grocery_info[0]["name"] %></h3>
+          <% @grocery_info.each do |comment| %>
+          <ul>
+            <li><%= comment["body"] %></li>
+          </ul>
+          <% end %>
+        <% end %>
+    <% end %>

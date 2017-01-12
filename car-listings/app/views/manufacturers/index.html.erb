@@ -1,0 +1,15 @@
+<h3>Available Manufacturers</h3>
+
+
+<ol>
+  <% unless @manufacturers.nil? %>
+    <% @manufacturers.each do |manufacturer| %>
+      <li><%=link_to manufacturer.name, manufacturer %>, <%= manufacturer.country %></li>
+    <% end %>
+  <% end %>
+</ol>
+
+
+
+<p><%= link_to 'Add New Car', new_car_path %></p>
+<p><%= link_to 'Add New Manufacturer', new_manufacturer_path %></p>

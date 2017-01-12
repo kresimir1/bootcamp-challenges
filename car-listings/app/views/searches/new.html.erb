@@ -1,0 +1,34 @@
+<h2>Advanced Searh</h2>
+
+<%= form_for @search do |s| %>
+
+  <p>
+    <%= s.label :keywords, "Keywords" %>: <%= s.text_field :keywords %>
+  </p>
+
+
+  <p>
+  <%= s.label :manufacturer_name %><br />
+  <%= s.select :manufacturer_name, options_for_select(@manufacturers), include_blank: true %>
+ </p>
+
+
+  <p>
+  <%= s.label :color %><br />
+  <%= s.select :color, options_for_select(@colors), include_blank: true %>
+ </p>
+
+  <p>
+    <%= s.label :year %><br />
+    <%= s.select :year, options_for_select(@years), include_blank: true %>
+   </p>
+
+  <p>
+    <%= s.label :max_milage %><br />
+    <%= s.select :max_milage, options_for_select(@max_milage), include_blank: true %>
+  </p>
+
+  <p>
+      <%= s.submit "Search" %>
+  </p>
+<% end %>

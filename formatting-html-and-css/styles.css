@@ -1,0 +1,31 @@
+body {
+  margin:0px;
+  font-family: Verdana;
+  background-color: #F6F6EF;
+
+}
+
+
+header {
+  background-color: #FD6620;
+  padding: 7px;
+}
+#page {
+  font-family: Monospace;
+  font-weight: bold;
+  color: white;
+  font-size: 1.7em;
+}
+#title {
+  text-align: center;
+  margin-left: 20%;
+}
+
+div {
+  padding: 8px;
+}
+h1 {font-size: 1.4em;}
+img {
+  width: 25%;
+  height: 25%;
+}

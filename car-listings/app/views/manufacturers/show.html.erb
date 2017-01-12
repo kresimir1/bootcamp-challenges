@@ -1,0 +1,13 @@
+<h1><%= @manufacturer.name %></h1>
+<h3>Country: <%= @manufacturer.country %></h3>
+
+
+
+<h4>Available cars by this manufacturer:</h4>
+<ol>
+  <% unless @cars.nil? %>
+    <% @cars.each do |car| %>
+      <li><%=link_to car.model, car %>, <%= car.year %></li>
+    <% end %>
+  <% end %>
+</ol>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EventTracker</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <header style="color:blue;">
+        <%= render "layouts/menu_list" %>
+      </header>
+      <%= render "layouts/flash" %>
+      <section id="main">
+        <%= yield %>
+      </section>
+        <%= render "layouts/sidebar" %>
+      <footer style="color:red;">
+        <%= render "layouts/menu_list" %>
+      </footer>
+  </body>
+</html>

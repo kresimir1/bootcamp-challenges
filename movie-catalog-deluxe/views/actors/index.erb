@@ -1,0 +1,13 @@
+<h3>Actors</h3>
+  <ol>
+    <%unless @actors.nil? %>
+      <% @actors.each do |actor| %>
+            <li>
+                <a href="actors/<%= actor["id"] %>"><%= actor["name"]%>
+
+                </a>
+
+            </li>
+      <% end %>
+    <% end %>
+  </ol>

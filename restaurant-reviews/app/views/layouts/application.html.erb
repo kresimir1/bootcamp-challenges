@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RestaurantReviews</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+  <p><%= link_to 'Home', restaurants_path %><p>
+  <p><%= link_to 'Categories', categories_path %><p>
+  </nav>
+
+<p class="notice"><%= notice %></p>
+<%= yield %>
+
+</body>
+</html>

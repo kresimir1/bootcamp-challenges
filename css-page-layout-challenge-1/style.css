@@ -1,0 +1,87 @@
+body {
+  margin: 0px;
+  background-color: #E5F3F4;
+  color: white;
+  font-family: Source Sans Pro;
+}
+nav {
+  font-family:Alegreya;
+  background-color: #3498DB;
+   height: 100px;
+   padding: 15px 50px;
+   border-width: 3px;
+   border-top-style: ridge;
+   line-height: 60%;
+}
+.site-title {font-size: 30px;}
+.sub-title {font-weight: normal;}
+p {
+  font-weight: normal;
+    font-size: 16px;
+}
+div.quote {
+  background-color: #2ECC71;
+   height: 120px;
+   width: 620px;
+   padding: 15px 50px;
+   border-width: 6px;
+   border-style: solid;
+   border-color: #27AE60;
+   margin: 35px auto;
+   border-radius: 5px;
+   color: black;
+}
+div.quote p {font-weight: bold;}
+.quoted-from {
+  font-style: italic;
+  text-align: right;
+}
+
+div.try-it-now {
+  background-color: #E74C3C;
+   height: 110px;
+   width: 340px;
+   padding: 15px 50px;
+   border-width: 6px;
+   border-style: solid;
+   border-color: #BF301D;
+   margin: 35px auto;
+   border-radius: 20px;
+   font-family:Alegreya;
+   line-height: 75%;
+   text-align: center;
+   font-style: italic;
+}
+
+div.try-it-now h4 {
+  font-weight: normal;
+  font-size: 21px;
+}
+div.try-it-now h3 a{
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+}
+
+div.blue-page-section {
+  background-color: #2C3E50;
+   height: 300px;
+   padding: 15px 100px;
+
+}
+div .content-wrapper h1 {
+}
+
+footer {
+  background-color: black;
+   height: 60px;
+   text-align: center;
+  color: #3396D9;
+}
+
+footer a {
+  margin: 20px;
+  line-height: 350%;
+  color: #3396D9;
+  text-decoration: none;
+}

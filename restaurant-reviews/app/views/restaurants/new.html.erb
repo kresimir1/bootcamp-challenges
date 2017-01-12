@@ -1,0 +1,57 @@
+
+<h3>New Restaurant Form</h3>
+
+<%= form_for @restaurant do |f| %>
+
+  <% if @restaurant.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@restaurant.errors.count, "error") %> prohibited
+        this restaurant from being saved:
+      </h2>
+      <ul>
+        <% @restaurant.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </p>
+
+  <p>
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </p>
+
+  <p>
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+  <% for category in Category.all %>
+      <div class="category">
+        <%= check_box_tag "restaurant[category_ids][]", category.id, @restaurant.categories.include?(category) %>
+        <%= category.name %>
+      </div>
+  <% end %>
+
+    <%= f.submit 'Add Restaurant' %>
+  </p>
+
+<% end %>

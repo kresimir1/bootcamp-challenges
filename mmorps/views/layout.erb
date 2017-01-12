@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MMORPS</title>
+    <style>
+        div {
+          background-color: white;
+          border: #200 6px ridge;
+          margin: 40px 300px ;
+          padding: 20px;
+        }
+      </style>
+  </head>
+
+  <body style="background-color:grey;">
+    <div>
+        <header>
+          <h1>MMORPS</h1>
+        </header>
+
+        <p><%= session[:round_winner] %></p>
+
+        <h4> Player / Score </h4>
+        <p>Human: <%= session[:player_score] %></p>
+        <p>Computer: <%= session[:computer_score] %></p>
+
+
+
+        <h2>  Choose! </h2>
+        <form action="/" method="post">
+          <label for="player_choice"></label>
+          <input type="submit" class="button" value="Rock" name="player_choice"/>
+          <input type="submit" class="button" value="Paper" name="player_choice"/>
+          <input type="submit" class="button" value="Scissors" name="player_choice"/>
+        </form>
+        <% if session[:player_score] == 3 %>
+          <p> Player wins! </p>
+          <a href="/reset"><button>Play again</button></a>
+        <% elsif session[:computer_score] == 3 %>
+          <p> Computer wins! </p>
+          <a href="/reset"><button>Play again</button></a>
+        <% end %>
+    </div>
+  </body>
+</html>

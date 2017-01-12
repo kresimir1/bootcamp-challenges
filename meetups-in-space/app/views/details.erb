@@ -1,0 +1,37 @@
+<h1><%= @meetups.name %></h1>
+
+<dl>
+  <dt>Location:</dt>
+
+  <dd><%= @meetups.location %></dd>
+
+  <dt>Creator:</dt>
+
+  <dd><%= @meetups.creator %> </dd>
+
+</dl>
+<p>Description:</p>
+<p><%= @meetups.description %></p>
+
+
+<h4>Members:</h4>
+<% unless @usernames.nil? %>
+  <% @usernames.each do |username| %>
+    <% unless @avatars.nil? %>
+      <% @avatars.each do |avatar| %>
+
+        <p><img src="<%= avatar %>" id = "picture" style="width:30px;height:28px;">  <%= username %></p>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+<form action="/meetups/<%= @meetups.id %>" method="post">
+  <input type="submit" id="join" name="members[user_id]" value="Join Meetup">
+</form>
+
+
+
+
+
+
+<h4><a href="/meetups">Back to main page</a></h4>

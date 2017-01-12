@@ -1,0 +1,15 @@
+<h3>Movies</h3>
+  <ol>
+    <%unless @movies.nil? %>
+      <% @movies.each do |movie| %>
+            <li>
+                <a href="movies/<%= movie["id"] %>"><%= movie["title"]%></a>
+                <p>Year: <%= movie["year"]%></p>
+                <p>Rating: <%= movie["rating"]%></p>
+                <p>Genre: <%= movie["genre"]%></p>
+                <p>Studio: <%= movie["studio"]%></p>
+
+            </li>
+      <% end %>
+    <% end %>
+  </ol>

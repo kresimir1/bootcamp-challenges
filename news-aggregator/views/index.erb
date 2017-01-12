@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>News Agreagator - main</title>
+  </head>
+
+  <body>
+    <h2>News Aggregator</h2>
+    <h3>Articles</h3>
+    <a href="/articles/new">Add new article</a>
+
+    <ol>
+      <% @articles.each_with_index do |article, index| %>
+        <% current_url = @urls[index] %>
+        <% current_description = @descriptions[index] %>
+            <li>
+              <p><%= article %></p>
+              <p><a href="<%= current_url %>"><%= current_url %></a></p>
+              <p><%= current_description %></p>
+            </li>
+
+      <% end %>
+
+    </ol>
+
+  </body>
+</html>

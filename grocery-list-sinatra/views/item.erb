@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Item</title>
+  </head>
+
+  <body>
+    <h1>Item</h1>
+
+      <% unless @groceries.nil? %>
+        <% @groceries.each do |grocery|%>
+          <% if grocery[0] == @grocery_name %>
+              <%= grocery[0] %> (<%= grocery[1] %>)
+          <% end %>
+        <% end %>
+      <% end %>
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>List of groceries</title>
+  </head>
+
+  <body>
+    <h1>Groceries</h1>
+
+
+    <ul>
+      <% unless @groceries.nil? %>
+        <% @groceries.each do |grocery|%>
+              <li><a href="/groceries/<%= grocery[0] %>"><%= grocery[0] %> (<%= grocery[1] %>)</a></li>
+
+        <% end %>
+      <% end %>
+
+    </ul>
+    <form action="/groceries" method="post">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+
+      <div>
+        <label for="quantity">Quantity</label>
+        <input type="number" value="<%= @quantity %>" id="quantity" name="quantity" placeholder="Optional" min="0" step="any">
+      </div>
+      <div>
+        <button><input  type="submit" value="Add"></button>
+      </div>
+      <p><%= @message %></p>
+    </form>
+  </body>
+</html>

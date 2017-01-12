@@ -1,0 +1,12 @@
+
+<% if controller.action_name == "index" %>
+  <h4>Event Statistics</h4>
+<% end %>
+<% if controller.action_name == "show" %>
+  <h4>About this Event</h4>
+<% end %>
+
+
+<section id="sidebar">
+  <%= controller.action_name %>
+</section>

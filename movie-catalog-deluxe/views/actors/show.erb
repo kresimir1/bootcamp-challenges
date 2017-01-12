@@ -1,0 +1,13 @@
+<h1> About the actor </h1>
+  <ol>
+    <%unless @actor_info.nil? %>
+      <% @actor_info.each do |info| %>
+        <li>  <ul>
+            <li><%= info["name"] %> </li>
+            <li><a href="/movies/<%= info["movie_id"] %>"><%= info["title"] %></a> </li>
+            <li><%= info["character"] %> </li>
+
+          </ul>  </li>
+      <% end %>
+    <% end %>
+  </ol>

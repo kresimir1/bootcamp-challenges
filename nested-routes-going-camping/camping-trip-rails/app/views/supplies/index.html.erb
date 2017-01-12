@@ -1,0 +1,12 @@
+<h1> <%= @title %> </h1>
+
+<% unless @camper.nil? %>
+  <p>Supplies Brought by <%= @camper.name %></p>
+<% end %>
+<ul>
+  <% @supplies.each do |supply| %>
+    <li>
+      <%= supply.name %>
+    </li>
+  <% end %>
+</ul>
